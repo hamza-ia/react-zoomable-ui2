@@ -1,19 +1,19 @@
 {
-  "name": "react-zoomable-ui",
+  "name": "react-zoomable-ui2",
   "description": "React library for building zoomable UI.",
-  "version": "0.11.0",
+  "version": "1.0.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aarondail/react-zoomable-ui.git"
+    "url": "git+https://github.com/hamza-ia/react-zoomable-ui2.git"
   },
-  "author": "Aaron Dail <aaron@planetdail.com> (http://github.com/aarondail)",
+  "author": "Aaron Dail <aaron@planetdail.com> (http://github.com/aarondail) ",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aarondail/react-zoomable-ui/issues"
+    "url": "https://github.com/hamza-ia/react-zoomable-ui2/issues"
   },
-  "homepage": "https://github.com/aarondail/react-zoomable-ui#readme",
+  "homepage": "https://github.com/hamza-ia/react-zoomable-ui2#readme",
   "files": [
     "dist",
     "src"
