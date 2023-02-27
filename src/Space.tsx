@@ -185,6 +185,14 @@ export class Space extends React.PureComponent<SpaceProps, SpaceState> {
       // transform so at some point we probably should remove innerDivStyle and
       // innerDivClassName as that will be safer.
       transformedDivStyle = { ...transformedDivStyle, ...this.props.innerDivStyle, margin: 0 };
+
+      if(this.props.isWheelDisabled){
+
+        this.viewPort?.removeWheelListner();
+      }
+      else {
+        this.viewPort?.addWheelListner();
+      }
     }
     return (
       <div
@@ -275,7 +283,6 @@ export class Space extends React.PureComponent<SpaceProps, SpaceState> {
     if (this.props.onDecideHowToHandlePress) {
       const result = this.props.onDecideHowToHandlePress(e, coordinates);
       if (result) {
-        console.log("result", result)
         return result;
       }
     }
@@ -303,12 +310,6 @@ export class Space extends React.PureComponent<SpaceProps, SpaceState> {
   };
 
   private handleHover = (e: MouseEvent, coordinates: PressEventCoordinates) => {
-    if(this.props.isWheelDisabled){
-      this.viewPort?.removeWheelListner();
-    }
-    else {
-      this.viewPort?.addWheelListner();
-    }
     const interactableId = getInteractableIdMostApplicableToElement(e.target as any);
     const interactable = (interactableId && this.interactableRegistry.get(interactableId)) || undefined;
     if (interactable && interactable instanceof Pressable) {
